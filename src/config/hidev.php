@@ -16,7 +16,7 @@ return [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@hidev/views' => ['@entero/console/views'],
+                    '@hidev/views' => ['@codexten/yii/console/views'],
                 ],
             ],
         ],
