@@ -1,0 +1,16 @@
+deploy:
+  before:
+  - console-app
+
+consoleApp:
+  path: .
+  runtime:
+    console:
+      chmod:  '0777'
+    logs:
+      cron:
+        chmod:  '0777'
+  yii:
+    chmod:  '0777'
+    once: true
+    template: console-app/yii.twig

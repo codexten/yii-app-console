@@ -15,7 +15,7 @@
     "branch-alias": {
       "dev-master": "2.0.x-dev"
     },
-    "sconfig-plugin": {
+    "config-plugin": {
       "hidev": "src/config/hidev.php",
       "params": "src/config/params.php",
       "migrationNamespaces": "src/config/migrationNamespaces.php",
