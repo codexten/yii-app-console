@@ -1,0 +1,28 @@
+{
+  "name": "codexten/yii-app-console",
+  "description": "yii console app",
+  "type": "library",
+  "require": {
+    "codexten/yii-core": "2.0.*",
+    "ifsnop/mysqldump-php": "v2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "codexten\\yii\\console\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    },
+    "sconfig-plugin": {
+      "hidev": "src/config/hidev.php",
+      "params": "src/config/params.php",
+      "migrationNamespaces": "src/config/migrationNamespaces.php",
+      "console": [
+        "$core",
+        "src/config/console.php"
+      ]
+    }
+  }
+}
