@@ -21,7 +21,7 @@ use yii\console\Controller;
 class AppController extends Controller
 {
     // events
-    const EVENT_BEFORE__SETUP = 'afterSetup';
+    const EVENT_BEFORE_SETUP = 'beforeSetup';
     const EVENT_AFTER_SETUP = 'afterSetup';
     const EVENT_ACTION_TEST = 'actionTest';
 
@@ -31,7 +31,7 @@ class AppController extends Controller
      */
     public function actionSetup()
     {
-        $this->trigger(self::EVENT_BEFORE__SETUP);
+        $this->trigger(self::EVENT_BEFORE_SETUP);
         Yii::$app->runAction('db/init', ['interactive' => $this->interactive]);
         Yii::$app->runAction('migrate', ['interactive' => $this->interactive]);
         $this->trigger(self::EVENT_AFTER_SETUP);
