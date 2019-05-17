@@ -20,10 +20,10 @@ use yii\helpers\Console;
 class CronController extends Controller
 {
     // events
-    const EVENT_ON_EVERY_MINUTE_RUN = "everyMinute";
-    const EVENT_ON_EVERY_FIVE_MINUTE_RUN = "everyFiveMinute";
-    const EVENT_ON_HOURLY_RUN = "hourly";
-    const EVENT_ON_DAILY_RUN = "daily";
+    const EVENT_ON_EVERY_MINUTE_RUN = "cronEveryMinute";
+    const EVENT_ON_EVERY_FIVE_MINUTE_RUN = "cronEveryFiveMinute";
+    const EVENT_ON_HOURLY_RUN = "cronHourly";
+    const EVENT_ON_DAILY_RUN = "cronDaily";
 
     /**
      * Executes every minute cron tasks.
