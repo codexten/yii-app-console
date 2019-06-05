@@ -9,7 +9,9 @@
 namespace codexten\yii\console\controllers;
 
 
+use yii\console\widgets\Table;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Console;
 
 class MigrateController extends \yii\console\controllers\MigrateController
 {
@@ -20,6 +22,7 @@ class MigrateController extends \yii\console\controllers\MigrateController
 
     /**
      * @inheritdoc
+     * @throws \ReflectionException
      */
     protected function getNewMigrations()
     {
@@ -29,13 +32,24 @@ class MigrateController extends \yii\console\controllers\MigrateController
             ArrayHelper::removeValue($migrations, $version);
         }
 
+        $migrationHistory = $this->getMigrationHistory(null);
+
+//        foreach ($migrations as $key => $migration) {
+//            $migrationClass = new \ReflectionClass($migration);
+//            if ($migrationClass->hasMethod('alternatives')) {
+//                $alternatives = $migration::alternatives();
+//                foreach ($alternatives as $key => $alternative) {
+//                    if (is_array($alternative)) {
+//
+//                    } elseif (isset($migrationHistory[$alternative])) {
+//                        unset($migrations[$key]);
+//                    }
+//
+//                }
+//            }
+//
+//        }
+
         return $migrations;
     }
-
-
-    protected function isExist($version)
-    {
-
-    }
-
 }

@@ -7,9 +7,9 @@
 
 namespace codexten\yii\console\controllers;
 
-use yii\helpers\ArrayHelper;
 use Yii;
 use yii\console\Controller;
+use yii\helpers\ArrayHelper;
 
 /**
  * Class AppController
