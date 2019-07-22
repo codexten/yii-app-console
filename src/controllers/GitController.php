@@ -19,7 +19,7 @@ class GitController extends Controller
 
         $projectPath = rtrim($vendorDir, '/vendor');
         chdir($projectPath);
-        exec("git {$command}");
+        echo exec("git {$command}");
         chdir($currentDir);
         echo "\n";
     }
