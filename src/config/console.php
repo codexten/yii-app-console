@@ -1,10 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jomon
- * Date: 8/5/18
- * Time: 8:45 PM
- */
+
+use codexten\yii\console\controllers\GitController;
+use codexten\yii\console\controllers\MessageController;
+use codexten\yii\console\controllers\SeedController;
+
+/* @var $migrationNamespaces array */
 
 return [
     'id' => 'console',
@@ -29,13 +29,16 @@ return [
             'repo' => $params['db.repo'],
         ],
         'message' => [
-            'class' => \codexten\yii\console\controllers\MessageController::class,
+            'class' => MessageController::class,
         ],
         'cron' => [
             'class' => '\codexten\yii\console\controllers\CronController',
         ],
         'seed' => [
-            'class' => \codexten\yii\console\controllers\SeedController::class,
+            'class' => SeedController::class,
+        ],
+        'git' => [
+            'class' => GitController::class,
         ],
     ],
 ];
